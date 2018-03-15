@@ -1,0 +1,29 @@
+* {
+    border: 2px solid black;
+}
+div {
+    padding:3%;
+    height: 260px;
+    background-color: rebeccapurple;
+    background-size: 300px 100px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.header {
+    color: rebeccapurple;
+    font-weight: bold;
+    text-align: center;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    height: auto;
+    width: auto;
+    background-color: bisque;
+}
