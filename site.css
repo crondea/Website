@@ -13,11 +13,18 @@
     height: 100%;
 }
 
-.center {
+.centerimage {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: auto; 
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
 
 .left {
@@ -30,6 +37,7 @@
 }
 
 .vbinfo {
+    margin-top: 1%;
     width: 50%;
     height: 250px;
     margin-left: 25%;
