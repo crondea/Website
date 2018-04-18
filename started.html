@@ -6,7 +6,6 @@
     </head>
 <body>
 
-
     <div class="div1">
             <img src="Paw_logo.svg.png" height="255" width="255" class="centerimage">
     </div>
@@ -14,7 +13,9 @@
     <!-- Headers -->
     <section>
         <h1 class="header">User Manual for VirtualBox</h1>
-        <h2 class="header">ENGL 3140</h2>
+        <h1 class="header">ENGL 3140</h1>
+        <h1 class="header">Created by Caroline Hester, Corey Rondeau, Robert Barr and Joseph Watkins</h1>
+
         <p style="text-align: center;">
             The prupose of this document is to serve as a user guide for VirtualBox.
         </p>
@@ -34,69 +35,74 @@
         <li><a href="features.html">Features</a></li>
         <li><a href="technical.html">Technical Background</a></li>
         <li><a href="trouble.html">Troubleshooting</a></li>
+        <li><a href="security.html">Security</a></li>
         <li><a href="haha.html">Authorized Personel Only</a></li>
     </ul>
 
-
-    <!-- VirtualBox Info -->
-    <div class="center">
-        <p style="text-align:center;">
-            VirtualBox is a cross-platform virtualization application. It can be installed
-            on your current computer. It extends the current capabilities of your computer 
-            to run multiple operating systems. VirtualBox can run on systems from small 
-            embedded systems to personal laptops to datacenter deployments to cloud 
-            environments.
-        </p>
-    </div>
-
     <!-- Configuring Virtual Machines -->
     <div class="centercontent">
-        <h3 class="header">Installation</h3>
-        <ol>
-            <li>Navigate to Virtualbox.org.</li>
-            <li>Click on the large "Download VirtualBox 5.2" button.</li>
-            <li>Select the package for your platform (Windows, OS X, etc.).</li>
-            <li>
-                When the download completes, run the downloaded exe file and continue
-                through the installation wizard using default settings.
-            </li>
-        </ol>
-        <h4 class="header">Configuring Virual Machine</h4>
-        <ol>
-            <li>To create a new virtual machine, click the <b>new</b> icon <img src="newbutton.JPG" height="35" width="25"> 
-                in the upper-left corner.
-            </li>
-            <li>
-                In this screen, enter the custom name and type of the virtual machine
-                intending to be created. Click next.
-            </li>
-                <img src="newVM.JPG" height="285" width="285" class="centerimage">
-            <li>
-                Select the amount of RAM you would like to allocate for the virtual machine
-                (this will vary based on the machine). Click next.
-            </li>
-                <img src="RAM.JPG" height="285" width="285" class="centerimage">
-            <li>
-                Select which option for the virtual hard disk where the storage of the virtual
-                machine will be stored. It is recommended to "Create a virtual hard disk now".
-                Click next.
-            </li>
-                <img src="disk.JPG" height="285" width="285" class="centerimage">
-            <li>
-                Next, select the hard disk file type (VDI is recommended). Click next.
-            </li>
-                <img src="disktype.JPG" height="285" width="285" class="centerimage">
-            <li>
-                Next, choose if the hard disk will be Dynamically allocated or a Fixed size.
-                Dynamically allocated is recommended. Click next,
-            </li>
-                <img src="storage.JPG" height="285" width="285" class="centerimage">
-        </ol>
+        <h2 class="header">Installation</h2>
+            <ol>
+                <li>Navigate to Virtualbox.org.</li>
+                <li>Click on the large "Download VirtualBox 5.2" button.</li>
+                <li>Select the package for your platform (Windows, OS X, etc.).</li>
+                <li>
+                    When the download completes, run the downloaded exe file and continue
+                    through the installation wizard using default settings.
+                </li>
+            </ol>
+        <h2 class="header">Configuring Virual Machine</h2>
+            <ol>
+                <li>To create a new virtual machine, click the <b>new</b> icon <img src="newbutton.JPG" height="35" width="25"> 
+                    in the upper-left corner.
+                </li>
+                <li>
+                    In this screen, enter the custom name and type of the virtual machine
+                    intending to be created. Click next.
+                </li>
+                    <img src="newVM.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Select the amount of RAM you would like to allocate for the virtual machine
+                    (this will vary based on the machine). Click next.
+                </li>
+                    <img src="RAM.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Select which option for the virtual hard disk where the storage of the virtual
+                    machine will be stored. It is recommended to "Create a virtual hard disk now".
+                    Click next.
+                </li>
+                    <img src="disk.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Next, select the hard disk file type (VDI is recommended). Click next.
+                </li>
+                    <img src="disktype.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Next, choose if the hard disk will be Dynamically allocated or a Fixed size.
+                    Dynamically allocated is recommended. Click next.
+                </li>
+                    <img src="storage.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Finally, confirm everything is correct in the last window, then click create.
+                </li>
+                    <img src="create.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    You will now see the new virtual machine show up in the main window of VirtualBox Manager.
+                </li>
+                    <img src="myVM.JPG" height="285" width="285" class="centerimage">
+                <li>
+                    Click on the virutual machine you just created and click <b>Start</b> to run it.
+                </li>
+                    <img src="start.JPG" height="50" width="50" class="centerimage">
+                <li>
+                    Next, the system will request an <b>iso</b> file to boot the virtual machine from. Put the <b>iso</b>
+                    of your choice in a known folder, then navigate to it by selecting the folder button.
+                </li>
+                    <img src="folder.JPG" height="50" width="50" class="centerimage">
+                <li>
+                    Once the <b>iso</b> has been selected, click start to boot the virtual machine. Your virtual
+                    machine is now ready to go.
+                </li>
+            </ol>
     </div>
-
-
-
-
-
 </body>
 </html>

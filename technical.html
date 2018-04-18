@@ -6,15 +6,16 @@
     </head>
 <body>
 
-
     <div class="div1">
-            <img src="Paw_logo.svg.png" height="255" width="255" class="center">
+            <img src="Paw_logo.svg.png" height="255" width="255" class="centerimage">
     </div>
 
     <!-- Headers -->
     <section>
         <h1 class="header">User Manual for VirtualBox</h1>
-        <h2 class="header">ENGL 3140</h2>
+        <h1 class="header">ENGL 3140</h1>
+        <h1 class="header">Created by Caroline Hester, Corey Rondeau, Robert Barr and Joseph Watkins</h1>
+
         <p style="text-align: center;">
             The prupose of this document is to serve as a user guide for VirtualBox.
         </p>
@@ -22,43 +23,137 @@
             VirtualBox is free, open-source software that can be found at:
             <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>
         </p>
+        <p style="text-align: center; color: red;">
+            *For best results view this site in full screen*
+        </p>
     </section>
 
     <!-- Navigation Bar -->
     <ul class="nav">
-        <li><a href="page1.html">Home</a></li>
-        <li><a href="page2.html">Getting Started</a></li>
-        <li><a href="page3.html">Features</a></li>
-        <li><a href="page4.html">Technical Background</a></li>
-        <li><a href="page4.html">Troubleshooting</a></li>
-        <li><a href="page4.html">Authorized Personel Only</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="started.html">Getting Started</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="technical.html">Technical Background</a></li>
+        <li><a href="trouble.html">Troubleshooting</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="haha.html">Authorized Personel Only</a></li>
     </ul>
 
-    <!-- Introduction Paragraphs -->
-    <section>
-        <h3 style="text-align:center; font-weight:700;">Introduction</h3>
-        <p class="homeparagraph">
-            The menu bar above can be used to navigate the guide. If you have never used
-            VirtualBox before, click <b>Getting Started</b> to begin! If you have used it
-            before and are looking for a specific topic, feel free to skip around until you
-            find it.
-        </p>
-    </section>
 
-    <!-- VirtualBox Info -->
-        <div class="vbinfo">
-            <img src="Virtualbox_logo.png" height="155" width="155" class="left">
-            <p style="width: 500px; float: right;">
-                VirtualBox is a commonly used program for running virtual machines on your main 
-                operating system. Similar software exists, but the nice thing about VirtualBox
-                is that it's <b>free</b>! This website is inteded to serve as a basic user guide
-                on using VirtualBox. This guide will not cover every aspect and feature of the
-                software, so other research may be required.
-            </p>
-        </div>
-
-
-
-
+    <!-- Configuring Virtual Machines -->
+    <div class="centercontent">
+        <h2 class="header">Location of VirtualBox Files</h2>
+            <ol>
+               <li>
+                   For virtual machines created using VirtualBox 4.0 and later.
+                   <div>
+                       <ul>
+                           <li>
+                                <b>Windows:</b> "C:/Users/Username/Virtualbox VMs" where username is the name of
+                                the current user logged in.
+                           </li>
+                           <li>
+                                <b>Linux:</b> "/home/username/virtualbox vms" where username is the name of the
+                                current user logged in.
+                           </li>
+                           <li>
+                               <b>Mac OS X:</b> "users/username/virtualbox vms" where username is the name of the
+                               current user logged in.
+                           </li>
+                       </ul>
+                   </div>
+               </li>
+               <li>
+                   VirtualBox uses xml files for both machine settings and global configuration files.
+               </li>
+            </ol>
+        <h2 class="header">VirtualBox Executables and Components</h2>
+            <ol>
+                <li>
+                    When the VirtualBox graphical user interface (GUI) is opened, there are processes running:
+                    <div>
+                        <ul>
+                            <li>
+                                VboxSC: the process responsible for bookkeeping, the state of all virtual machines,
+                                and the communication between different components.
+                            </li>
+                            <li>
+                                The GUI process which displays the virtual machines and their settings.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    VirtualBox contains many components internally and here are some that a user might encounter
+                    when analyzing error messages or log files:
+                    <div>
+                        <ul>
+                            <li>
+                                IPRT - portable runtime library
+                            </li>
+                            <li>
+                                VMM - Virtual machine monitor
+                            </li>
+                            <li>
+                                EM - Execution manager
+                            </li>
+                            <li>
+                                TRPM - Trap manager
+                            </li>
+                            <li>
+                                HM - Hardware acceleration manager
+                            </li>
+                            <li>
+                                GIM - Guest interface manager
+                            </li>
+                            <li>
+                                PDM - Pluggable device manager
+                            </li>
+                            <li>
+                                PGM - Page manager
+                            </li>
+                            <li>
+                                PATM - Patch manager
+                            </li>
+                            <li>
+                                TM - Time manager
+                            </li>
+                            <li>
+                                CFGM - Configuration manager
+                            </li>
+                            <li>
+                                SSM - Saved state manager
+                            </li>
+                            <li>
+                                VUSB - Virtual USB
+                            </li>
+                            <li>
+                                DBGF - Debug facility
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        <h2 class="header">Paravirtualization</h2>
+            <ol>
+               <li>
+                   This allows the following paravirtualization interfaces:
+                   <div>
+                       <ul>
+                           <li>
+                               Minimal - Alerts the presence of the virtualized environment and reports the
+                               TPC and AIPC frequency to the guest operating system.
+                           </li>
+                           <li>
+                               KVM - Presents a Linux hypervisor interface.
+                           </li>
+                           <li>
+                               Hyper-V - Presents a Microsoft Hyper-V hypervisor interface.
+                           </li>
+                       </ul>
+                   </div>
+               </li>
+            </ol>
+    </div>
 </body>
 </html>
