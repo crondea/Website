@@ -36,23 +36,173 @@
         <li><a href="technical.html">Technical Background</a></li>
         <li><a href="trouble.html">Troubleshooting</a></li>
         <li><a href="security.html">Security</a></li>
-        <li><a href="haha.html">Authorized Personel Only</a></li>
     </ul>
 
 
     <!-- Configuring Virtual Machines -->
     <div class="centercontent">
-        <h2 class="header"></h2>
+        <h2 class="header">Procedures and Tools</h2>
             <ol>
-
+                <li>
+                    Any issue a physical machine would encounter, a virtual machine
+                    will most likely encounter as well. Below are some common
+                    troubleshooting methods.
+                </li>
+                <li>
+                    Procedures and Tools
+                    <div>
+                        <ul>
+                            <li>
+                                Categorize and isolate problems by asking questions about
+                            the problem.
+                            </li>
+                            <li>
+                                Collect debugging information.
+                                <div>
+                                    <ol>
+                                        <li>
+                                            A release log file is created every time VirtualBox
+                                            starts a virtual machine.
+                                        </li>
+                                        <li>
+                                            The log file is called 'VBox.log' and is stored in 
+                                            %HOME/VirtualBox/VMs/{machinename}/Logs.
+                                        </li>
+                                        <li>
+                                            Crash dumps can be collected by using 'VBoxManage debugvm'
+                                            in the case of a crash.
+                                        </li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>
+                                VirtualBox has a build-in debugger
+                                <div>
+                                    <ul>
+                                        <li>
+                                            It can be accessed by the debugger console window or via the
+                                            telnet protocol at port 5000.
+                                        </li>
+                                        <li>
+                                            It can be enabled by the'VirtualBox --startvm --debug' command
+                                            or setting the 'VBOX_GUI_DBG_ENABLED' to true or setting the
+                                            'GUI/Dbg/Enabled' extra data item to true.
+                                        </li>
+                                        <li>
+                                            Frequently used commands:
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        stop -- stops the virtual machine execution and enables
+                                                        single stepping
+                                                    </li>
+                                                    <li>
+                                                        g -- continue VM execution
+                                                    </li>
+                                                    <li>
+                                                        t -- single step an instruction
+                                                    </li>
+                                                    <li>
+                                                        rg/rh/r -- print the guest/hypervisor/current registers
+                                                    </li>
+                                                    <li>
+                                                        kg/kh/k -- print the guest/hypervisor/current call stack
+                                                    </li>
+                                                    <li>
+                                                        da/db/dw/dd/dq -- print memory contents as ASCII/bytes/words/dwords/gwords
+                                                    </li>
+                                                    <li>
+                                                        u -- unassemble memory
+                                                    </li>
+                                                    <li>
+                                                        dg - print the guest's GDT
+                                                    </li>
+                                                    <li>
+                                                        di -- print the guest's IDT
+                                                    </li>
+                                                    <li>
+                                                        dl -- print the guest's LDT
+                                                    </li>
+                                                    <li>
+                                                        dp* -- print the guest's page table structures
+                                                    </li>
+                                                    <li>
+                                                        bp/br - set a normal/recompiler breakpoint
+                                                    </li>
+                                                    <li>
+                                                        bl -- list breakpoints
+                                                    </li>
+                                                    <li>
+                                                        bc -- clear a breakpoint
+                                                    </li>
+                                                    <li>
+                                                        writecore -- writes a virtual machine core file to disk
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ol>
-        <h2 class="header"></h2>
+        <h2 class="header">General</h2>
             <ol>
-
+                <li>
+                    Performance variation with frequency boosting:
+                    <div>
+                        <ul>
+                            <li>
+                                Frequency boosting is when if only one core is utilized
+                                it can run faster than the rated CPU frequency.
+                            </li>
+                            <li>
+                                Measured performance varies as a function of momentary
+                                overall system load.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ol>
-        <h2 class="header"></h2>
+        <h2 class="header">Windows Guests</h2>
             <ol>
-
+                <li>
+                    Windows blue screen:
+                    <div>
+                        <ul>
+                            <li>
+                                If the virtual machine settings are changed after
+                                installing Windows.
+                            </li>
+                            <li>
+                                If a disk image was copied from an already installed
+                                Windows OS.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        <h2 class="header">Linux Guests</h2>
+            <ol>
+                <li>
+                    High CPU load:
+                    <div>
+                        <ul>
+                            <li>
+                                High timer frquency of the guest kernel.
+                            </li>
+                            <li>
+                                Some distributions ship a kernel configured for a timer
+                                frequency of 1000Hz.
+                            </li>
+                            <li>
+                                Recompile the kernel and select a timer frequency of 100Hz.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ol>
     </div>
 </body>

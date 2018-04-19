@@ -36,8 +36,73 @@
         <li><a href="technical.html">Technical Background</a></li>
         <li><a href="trouble.html">Troubleshooting</a></li>
         <li><a href="security.html">Security</a></li>
-        <li><a href="haha.html">Authorized Personel Only</a></li>
     </ul>
 
+
+    <!-- Configuring Virtual Machines -->
+    <div class="centercontent">
+        <h2 class="header">Secure Application Guidelines</h2>
+            <ol>
+                <li>
+                    Keep software up to date
+                </li>
+                <li>
+                    Restrict network access to critical services
+                </li>
+                <li>
+                    Follow the principle of least priviledge
+                </li>
+                <li>
+                    Monitor system activity
+                </li>
+            </ol>
+        <h2 class="header">Download Source</h2>
+            <ol>
+                <li>
+                    The VirtualBox package should only be downloaded from a known and
+                    trusted source such as <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>.
+                </li>
+            </ol>
+        <h2 class="header">Security Features of VirtualBox</h2>
+            <ol>
+                <li>
+                    Virtualbox is a virtual machine monitor that runs a virtual machine as a process on a 
+                    host operating system.  The guest process can’t control the host hardware directly, 
+                    but uses the virtual machine to control the allocated resources.
+                </li>
+                <li>
+                    Virtualbox use the NAT networking mode, which allows the Virtual machine to act like 
+                    a computer behind a router.
+                </li>
+                <li>
+                    The shared clipboard allows for the transfer of data between the host and guest.
+                    <div>
+                        <ul>
+                            <li>
+                                In “bidirectional” mode, the guest can can read and write to the host clipboard
+                            </li>
+                            <li>
+                                The “host to guest” and “guest to host” mode, data flow is limited to one direction
+                            </li>
+                            <li>
+                                When the guest is allowed to have access to the host clipboard, it is possible 
+                                that it can access sensitive information from the host.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    If a host folder is shared with a guest, then a remote user connected to the guest over 
+                    a network is able to access the folder.
+                </li>
+                <li>
+                    When CD/DVD passthrough is enabled, the guest can perform operations on the CD/DVD drive. 
+                    This could possibly allow for sensitive information on a DVD/CD to be overwritten.
+                </li>
+                <li>
+                    By passing USB devices to the guest, the guest has full control of the USB device.
+                </li>
+            </ol>
+    </div>
 </body>
 </html>
